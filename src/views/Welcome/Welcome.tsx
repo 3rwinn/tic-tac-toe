@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Linking } from 'react-native';
 
 import { Button, Container } from '@app/components';
 import { useChangeTheme } from '@app/context';
@@ -15,10 +14,6 @@ import { WelcomeProps } from './Welcome.types';
 
 const Welcome: React.FC<WelcomeProps> = ({ navigation }) => {
   const { isDarkTheme, setDarkTheme } = useChangeTheme();
-
-  const handleLinkAbout = React.useCallback(() => {
-    Linking.openURL('https://www.github.com/nrzky');
-  }, []);
 
   return (
     <Container style={styles.container}>
@@ -37,14 +32,7 @@ const Welcome: React.FC<WelcomeProps> = ({ navigation }) => {
           type="primary"
           onPress={() => navigation.replace('Game')}
         >
-          Play Game
-        </Button>
-        <Button
-          style={styles.button}
-          type="secondary"
-          onPress={handleLinkAbout}
-        >
-          About
+          Jouer
         </Button>
       </StyledButtonContainer>
     </Container>

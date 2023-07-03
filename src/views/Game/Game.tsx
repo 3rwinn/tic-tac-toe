@@ -128,7 +128,7 @@ const Game: React.FC<GameProps> = ({ navigation }) => {
           type="secondary"
           onPress={handleResetGame}
         >
-          Quit Game
+          Quitter
         </Button>
       </StyledButtonContainer>
     </Container>
